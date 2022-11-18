@@ -9,10 +9,21 @@
 </head>
 <body>
     <style>
-        .grid-container {
+         .grid-container {
             display: grid;
             background-color: #1c0009;
         }
+
+        .grid-container2 {
+            display: none;
+            background-color: #1c0009;
+        }
+
+        .grid-container2 #ballimg {
+            padding: 20px;
+            float: right; 
+        }
+
         .grid-item {
             background-color: #1c0009;
             padding: 40px;
@@ -20,6 +31,7 @@
             color: white;
             text-align: center;
         }
+        
         .grid-item2 {
             background-color: #1c0009;
             padding: 40px;
@@ -28,6 +40,13 @@
             text-align: left;
         }
 
+        .grid-item22 {
+            background-color: #1c0009;
+            padding: 40px;
+            font-size: 30px;
+            color: white;
+            text-align: right;
+        }
         .grid-item3 {
             background-color: white;
             padding: 40px;
@@ -35,10 +54,22 @@
             color: #1c0009;
             text-align: left;
         }
-
-        .grid01{ grid-template-columns: auto auto auto auto auto auto; }
+        
+        .grid01{ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
         .grid02{ grid-template-columns: auto; }
         .grid03{ grid-template-columns: auto; }
+        .grid04{ grid-template-columns: 1fr 1fr }
+
+        @media(max-width :1500px){
+                .grid01 {
+                    display: none;
+                }
+                .grid-container2 {
+                    display: block;
+                }
+               
+
+            }
     </style>
 </head>
 <body>
