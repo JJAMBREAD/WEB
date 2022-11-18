@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <style>
         .grid-container {
             display: grid;
+            background-color: #1c0009;
+        }
+
+        .grid-container2 {
+            display: none;
+            background-color: #1c0009;
+        }
+
+        .grid-container2 #ballimg {
+            padding: 20px;
+            float: right; 
             background-color: #1c0009;
         }
 
@@ -22,93 +31,86 @@
             color: white;
             text-align: center;
         }
-
+        
         .grid-item2 {
-            background-color: #1c0009;
-            padding: 50px;
-            font-size: 20px;
-            color: white;
-            text-align: left;
-        }
-
-        .grid-item3 {
-            background-color: white;
-            padding: 100px;
-            font-size: 30px;
-            color: #1c0009;
-            text-align: left;
-        }
-
-        .grid-item4 {
             background-color: #1c0009;
             padding: 40px;
             font-size: 30px;
             color: white;
             text-align: left;
         }
-
-        .grid01 {
-            grid-template-columns: auto auto auto auto auto auto;
+        .grid-item3 {
+            background-color: white;
+            padding: 40px;
+            font-size: 30px;
+            color: #1c0009;
+            text-align: left;
         }
 
-        .grid02 {
-            grid-template-columns: auto;
-        }
 
-        .grid03 {
-            grid-template-columns: auto;
-        }
+        .grid01{ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+        .grid02{ grid-template-columns: auto; }
+        .grid03{ grid-template-columns: auto; }
+        .grid04{ grid-template-columns: 1fr 1fr }
 
-        .grid04 {
-            grid-template-columns: auto;
-        }
+        @media(max-width :1500px){
+                .grid01 {
+                    display: none;
+                }
+                .grid-container2 {
+                    display: block;
+                }
+               
+
+            }
     </style>
-    </head>
+</head>
+<body>
+    <div class="grid-container grid01">
+        <div class="logo"><a href="0-index.html"><img src="로고.jpg" width="250px"></a></div>
+        <div class="grid-item"><a href="1-주요뉴스.html">주요뉴스</a></div>
+        <div class="grid-item"><a href="2-경기일정.html">경기일정</a></div>
+        <div class="grid-item"><a href="3-선수단.html">선수단</a></div>
+        <div class="grid-item"><a href="4-응원메시지.html">응원메시지</a></div>
+        <div class="grid-item22"><a href="1-1-로그인.html"><img src="공.png" width="100px"></a> </div>
+    </div>
 
-    <body>
-        <!--상단바-->
-        <div class="grid-container grid01">
-            <div class="logo"><a href="0-index.html"><img src="로고.jpg" width="250px"></a></div>
-            <div class="grid-item"><a href="1-주요뉴스.html">주요뉴스</a></div>
-            <div class="grid-item"><a href="2-경기일정.html">경기일정</a></div>
-            <div class="grid-item"><a href="3-선수단.html">선수단</a></div>
-            <div class="grid-item"><a href="4-응원메시지.html">응원메시지</a></div>
-            <div class="grid-item"><a href="1-1-로그인.html"><img src="공.png" width="50px"></a> </div>
+    <div class="grid-container2">
+        <span class="logo"><a href="0-index.html"><img src="로고.jpg" width="250px"></a>  </span>
+        <span id="ballimg"><a href="1-1-로그인.html"><img src="공.png" width="100px"></a> </span>
+    </div>
+    <div class="grid-container grid02">
+        <div>
+            <div class="grid-item2"> <h2>환영합니다</h2>
+            <h6>선수들에게 응원메시지를 보내시려면 회원 인증이 필요합니다.<br>
+          부적절한 언어사용은 제재 대상이오니, 유의하여 주시길 바랍니다.</h6>
+
+
         </div>
-        <!--안내문-->
-        <div class="grid-container grid02">
-            <div class="grid-item2">
-                <h1>환영합니다</h1>
-                <h4>선수들에게 응원메시지를 보내시려면 회원 인증이 필요합니다. <br>
-                    부적절한 언어사용은 제재 대상이오니, 유의하여 주시길 바랍니다.</h4>
-            </div>
+          </div>
 
-            <!--메인-->
-            <div class="grid-container grid03">
-                <div class="grid-item3">
-                    <!--참고한소스-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <div class="form-floating">
-                          <input class="form-control" id="email" type="email" placeholder="Enter your email..."
-                            data-sb-validations="required,email" />
-                          <label for="email">Email address</label>
-                          <div class="invalid-feedback" data-sb-feedback="email:required">이메일을 입력해주세요.</div>
-                          <div class="invalid-feedback" data-sb-feedback="email:email">이메일 형식에 맞춰 입력해주세요.</div>
-                        </div>
-                        <div class="form-floating">
-                          <input class="form-control" id="password" type="password" placeholder="Enter your password..."
-                            data-sb-validations="required,length" />
-                          <label for="password">Password</label>
-                          <div class="invalid-feedback" data-sb-feedback="password:required">비밀번호를 입력해주세요.</div>
-                          <div class="invalid-feedback" data-sb-feedback="password:length">비밀번호를 9자 이상 입력해주세요.</div>
-                        </div>
-                        <br />
-                            <!--여기까지-->
-
+        <div class="grid-container grid03">
+            <div class="grid-item3">
+                <h4>회원정보를 입력하세요.</h4>
+                <form action="">
+                    <div class="int-area">
+                        <label for="id">회원이름</label>
+                        <input type="text" name="id" id="id"
+                        autocomplete="off" required>
+                    </div>
+                    <div class="int-area">
+                        <label for="pw">비밀번호</label>
+                        <input type="password" name="pw" id="pw"
+                        autocomplete="off" required>
+                    </div>
+                    <div class="btn-area">
+                        <button type="submit">로그인</button>
+                    </div>
+                </form>
+                <div class="caption">
+                    <a href="">비밀번호가 기억나지 않으신가요?</a>
                 </div>
 
-                <div class="grid-container grid04">
-                    <div class="grid-item4">아래쪽</div>
-    </body>
-
+                @jjambread</div>
+</body>
 </html>
