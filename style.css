@@ -14,3 +14,19 @@ a:link {
     color : gray;
     text-decoration: none;
   }
+
+  .int-area
+  {font-size: 15px;}
+
+  .int-area input:focus+label,
+  .int-area input:valid+label{
+    top -2px;
+    font-size: 13px; color:blue
+  }
+
+  .btn-area {margin: 10px;}
+  .btn-area button
+  {width: 30%;}
+
+  .caption
+  {font-size: 15px;}
