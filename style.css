@@ -1,9 +1,9 @@
-a:link {
+.headtext {
     color : white;
     text-decoration: none;
   }
   a:visited {
-    color : white;
+    color : blue
     text-decoration: none;
   }
   a:hover {
