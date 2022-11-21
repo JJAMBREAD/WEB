@@ -106,7 +106,7 @@ ul.imgs li{
 }
 
 .login_container{
-  width: 380px; 
+  width: 400px; 
   height: 520px; 
   margin: auto; 
   border-radius: 3px; 
@@ -162,3 +162,5 @@ ul.imgs li{
   font-size: 17px; 
   font-weight: 500;
 }
+
+
