@@ -118,23 +118,75 @@
         <link rel="stylesheet" href="/Users/gwonseongmin/Desktop/Study_HTML/css/signup.css">
     </head>
     <body>
-        <body>
-             <div class = "login">
-              <h4 class = "title">회원정보를 기입해주시기 바랍니다.</h4>
-             <hr>
-             <p class = "id">아이디(닉네임): <input type="text" /></p>
-            <p class = "pw">비밀번호 설정: <input type="password" /></p>
-            <p class = "pw">비밀번호 확인: <input type="password" /></p>
-            <p class = "e-mail"> 이메일 주소: <input type="text" /></p>
-            <input type="checkbox"> email 수신 동의
-             <p class = "button"><button>회원가입</button></p>
-             <hr>
-             </div>
-          
+        
         </div>
     </body>
 </html>
+<div id="container" class="main_container">
+        <div style="padding: 20px;"></div>
+        <div class="login_container">
+            <div class="form_container">
+                <form name="login_form" action="/cookie" method="get">
+                    <div class="form_title_div">
+                        <p class="form_title_p">회원 정보를 입력해주세요.</p>
+                    </div>
+                    <div>
+                        <div>
+                            <a class="form_item_name">회원이름</a>
+                        </div>
+                        <div>
+                            <input type="text" name="username" placeholder="name" class="form_input"/>
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_username" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a class="form_item_name">이메일주소</a>
+                        </div>
+                        <div>
+                            <input type="text" name="email" placeholder="E-mail" class="form_input"/>
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_email" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a class="form_item_name">비밀번호</a>
+                        </div>
+                        <div>
+                            <input type="password" name="password" placeholder="Enter password" class="form_input" />
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_password" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a class="form_item_name">비밀번호 확인</a>
+                        </div>
+                        <div>
+                            <input type="password" name="password2" onfocus="" placeholder="Enter password again" class="form_input" />
+                        </div>
+                        <div class="form_text_alert_padding">
+                            <div id="alert_password2" class="form_text_alert"></div>
+                        </div>
+                    </div>
+                    <div style="height: 10px;"></div>
+                    <div>
+                        <button type="button" class="form_submit_button" onclick="login()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container grid02">
+    <div class="grid-item3">@jjambread</div>
 
+</body>
+</html>
 
 </body>
 </html>
