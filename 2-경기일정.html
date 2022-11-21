@@ -9,10 +9,21 @@
 </head>
 <body>
     <style>
-        .grid-container {
+       .grid-container {
             display: grid;
             background-color: #1c0009;
         }
+
+        .grid-container2 {
+            display: none;
+            background-color: #1c0009;
+        }
+
+        .grid-container2 #ballimg {
+            padding: 20px;
+            float: right; 
+        }
+
         .grid-item {
             background-color: #1c0009;
             padding: 40px;
@@ -20,12 +31,21 @@
             color: white;
             text-align: center;
         }
+        
         .grid-item2 {
             background-color: #1c0009;
             padding: 40px;
             font-size: 30px;
             color: white;
             text-align: left;
+        }
+
+        .grid-item22 {
+            background-color: #1c0009;
+            padding: 40px;
+            font-size: 30px;
+            color: white;
+            text-align: right;
         }
         .grid-item3 {
             background-color: white;
@@ -34,24 +54,42 @@
             color: #1c0009;
             text-align: left;
         }
-        .grid01{ grid-template-columns: auto auto auto auto auto auto; }
+        
+        .grid01{ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
         .grid02{ grid-template-columns: auto; }
         .grid03{ grid-template-columns: auto; }
+        .grid04{ grid-template-columns: 1fr 1fr }
+
+        @media(max-width :1420px){
+                .grid01 {
+                    display: none;
+                }
+                .grid-container2 {
+                    display: block;
+                }
+               
+
+            }
     </style>
 </head>
 <body>
     <div class="grid-container grid01">
-        <div class="logo"><a href="0-index.html"><img src="로고.jpg" width="250px"></a></div>
+        <div class="logo"><a href="index.html"><img src="로고.jpg" width="250px"></a></div>
         <div class="grid-item"><a href="1-주요뉴스.html">주요뉴스</a></div>
         <div class="grid-item"><a href="2-경기일정.html">경기일정</a></div>
         <div class="grid-item"><a href="3-선수단.html">선수단</a></div>
         <div class="grid-item"><a href="4-응원메시지.html">응원메시지</a></div>
-        <div class="grid-item"><a href="1-1-로그인.html"><img src="공.png" width="50px"></a> </div>
+        <div class="grid-item22"><a href="1-1-로그인.html"><img src="공.png" width="100px"></a> </div>
+    </div>
+
+    <div class="grid-container2">
+        <span class="logo"><a href="index.html"><img src="로고.jpg" width="250px"></a>  </span>
+        <span id="ballimg"><a href="1-1-로그인.html"><img src="공.png" width="100px"></a> </span>
     </div>
     <div class="grid-container grid02">
-        <div><img src="경기일정.jpg" iframe width="50%"></div>
+        <div style="text-align:center;"><img src="경기 일정.jpg" iframe width="40%"></div>
 
-        <div class="grid-container grid02">
+        <div class="grid-container grid03">
             <div class="grid-item3">@jjambread</div>
 </body>
 </html>
